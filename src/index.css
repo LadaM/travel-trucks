@@ -9,6 +9,17 @@
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
+    --black: #101828;
+    --asphalt: #475467;
+    --dark-grey: #6C717B;
+    --light-red: #E44848;
+    --dark-red: #D84343;
+    --yellow: #FFC531;
+    --grey: #DADDE1;
+    --light-grey: #F2F4F7;
+    --navbar-grey: #F7F7F7;
+    --white: #FFFFFF;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -19,19 +30,17 @@
 
 a {
     font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
+    text-decoration: none;
+    color: var(--black);
+    transition: color ease-in-out 0.5s;
 }
 
 a:hover {
-    color: #535bf2;
+    color: var(--light-red);
 }
 
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-width: 320px;
     min-height: 100vh;
 }

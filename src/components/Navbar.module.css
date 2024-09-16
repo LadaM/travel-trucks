@@ -1,0 +1,22 @@
+.navbar {
+    background-color: var(--navbar-grey);
+    display: flex;
+    align-items: center;
+    padding: 24px 64px;
+}
+
+.nav-link-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 450px;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: var(--dark-red);
+}

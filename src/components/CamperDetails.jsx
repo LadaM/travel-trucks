@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCamperDetails } from '../store/camperDetailsSlice';
 import { useParams } from 'react-router-dom';
