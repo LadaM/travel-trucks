@@ -1,12 +1,19 @@
-import css from './App.module.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import CamperList from './components/CampersList';
+import CamperDetails from './components/CamperDetails.jsx';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>Travel Trucks</h1>
-      <button className={css.primaryButton}>Click me</button>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/catalog" element={<CamperList />} />
+        <Route path="/catalog/:id" element={<CamperDetails />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
