@@ -1,0 +1,18 @@
+@import "../common.module.css";
+
+.home {
+    background-image: url('../assets/hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding-left: 64px;
+    color: var(--white);
+}
+
+.button {
+  margin-top: 24px; /* special margin for the button on home screen */
+}
