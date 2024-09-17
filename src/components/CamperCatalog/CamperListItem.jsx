@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import css from './CamperListItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavorite } from '../store/favoritesSlice';
+import { toggleFavorite } from '../../store/favoritesSlice.js';
 import { FaRegHeart } from 'react-icons/fa';
-import { ICONS } from '../constants.js';
-import Icon from './Icon.jsx';
+import { ICONS } from '../../constants.js';
+import Icon from '../Icon.jsx';
 import clsx from 'clsx';
-import CamperRating from './CamperRating.jsx';
+import CamperRating from '../CamperRating.jsx';
+import { camperShape } from '../../camperPropTypes.js';
 
 const CamperListItem = ({ camper }) => {
   const dispatch = useDispatch();
@@ -54,5 +55,9 @@ const CamperListItem = ({ camper }) => {
     </div>
   );
 };
+
+CamperListItem.propTypes = {
+  camper: camperShape.isRequired,
+}
 
 export default CamperListItem;

@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
-import { fetchCamperDetails } from '../store/camperDetailsSlice';
+import { fetchCamperDetails } from '../../store/camperDetailsSlice.js';
 import css from './CamperDetails.module.css';
 import BookingForm from './BookingForm.jsx';
-import CamperRating from './CamperRating.jsx';
+import CamperRating from '../CamperRating.jsx';
 import clsx from 'clsx';
+import { selectCamper } from '../../store/selectors.js';
 
 const CamperDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const camper = useSelector((state) => state.camperDetails.camper);
+  const camper = useSelector(selectCamper);
 
   useEffect(() => {
     dispatch(fetchCamperDetails(id));

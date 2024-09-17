@@ -4,6 +4,8 @@ export const selectCampers = (state) => state.campers.items;
 
 export const selectFilters = (state) => state.filters;
 
+export const selectCamper = (state) => state.camperDetails.camper;
+
 // Combined selector to get filtered campers
 export const selectFilteredCampers = createSelector(
   [selectCampers, selectFilters],

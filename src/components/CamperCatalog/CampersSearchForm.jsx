@@ -1,13 +1,12 @@
-import React from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilters } from '../store/filterSlice';
+import { setFilters } from '../../store/filterSlice.js';
 import * as Yup from 'yup';
-import { VEHICLE_EQUIPMENT_FILTERS, VEHICLE_TYPE_FILTERS } from '../constants.js';
-import { selectFilters } from '../store/selectors.js';
+import { VEHICLE_EQUIPMENT_FILTERS, VEHICLE_TYPE_FILTERS } from '../../constants.js';
+import { selectFilters } from '../../store/selectors.js';
 import css from './CampersSearchForm.module.css';
 import clsx from 'clsx';
-import Icon from './Icon.jsx';
+import Icon from '../Icon.jsx';
 
 const filterSchema = Yup.object().shape({
   location: Yup.string().required('Location is required'),
