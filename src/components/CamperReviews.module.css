@@ -1,0 +1,47 @@
+@import "../common.module.css";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header-info p {
+    text-align: left;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar h2 {
+    color: var(--light-red);
+}
+
+.rating svg {
+    fill: var(--yellow);
+}

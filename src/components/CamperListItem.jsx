@@ -25,7 +25,7 @@ const CamperListItem = ({ camper }) => {
           <div className={css.header}>
             <h2>{camper.name}</h2>
             <div className={css.headerRight}>
-              <h2>{camper.price}</h2>
+              <h2>€ {camper.price}</h2>
               <button onClick={handleFavoriteClick} className={clsx(css.favoriteButton, isFavorite && css.favorite)}>
                 <FaRegHeart />
               </button>
