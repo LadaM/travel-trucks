@@ -1,19 +1,7 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchCampers } from '../store/campersSlice';
 import { Link } from 'react-router-dom';
 import css from './CampersList.module.css';
 
-const CamperList = () => {
-  const dispatch = useDispatch();
-  const { campers, loading, error } = useSelector((state) => state.campers);
-
-  useEffect(() => {
-    dispatch(fetchCampers());
-  }, [dispatch]);
-
-  if (loading) return <p>Loading campers...</p>;
-  if (error) return <p>Error loading campers: {error}</p>;
+const CamperList = ({ campers }) => {
 
   return (
     <div className="campers-list">

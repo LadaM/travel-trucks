@@ -1,0 +1,81 @@
+@import "../common.module.css";
+
+.container {
+    min-width: 360px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: var(--asphalt)
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--dark-grey)
+}
+
+.filter-group h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+    margin: unset;
+    padding-bottom: 24px;
+}
+
+.input {
+    width: 360px;
+    height: 56px;
+    padding: 18px 218px 18px 20px;
+    gap: 10px;
+    border-radius: 12px;
+    background-color: var(--navbar-grey);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+}
+
+.filter-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: 112px;
+    height: 96px;
+    padding: 16px 40px 16px 40px;
+    border-radius: 12px;
+    border: 1px solid var(--grey);
+    background-color: var(--white);
+}
+
+.filter-button.selected {
+    border-color: var(--light-red);
+}
+
+.error {
+    color: var(--light-red);
+    font-size: small;
+    font-style: italic;
+}

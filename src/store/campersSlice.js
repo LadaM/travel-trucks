@@ -9,7 +9,7 @@ export const fetchCampers = createAsyncThunk('campers/fetchCampers', async () =>
 const campersSlice = createSlice({
   name: 'campers',
   initialState: {
-    campers: [],
+    items: [],
     loading: false,
     error: null,
   },
@@ -20,7 +20,7 @@ const campersSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchCampers.fulfilled, (state, action) => {
-        state.campers = action.payload || [];
+        state.items = action.payload || [];
         state.loading = false;
       })
       .addCase(fetchCampers.rejected, (state, action) => {
