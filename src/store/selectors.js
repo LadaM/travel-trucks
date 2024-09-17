@@ -8,7 +8,7 @@ export const selectFilters = (state) => state.filters;
 export const selectFilteredCampers = createSelector(
   [selectCampers, selectFilters],
   (campers, filters) => {
-    // console.log(campers);
+    console.log(campers);
     return campers.filter((camper) => {
       const matchesLocation = filters.location
         ? camper.location.toLowerCase().includes(filters.location.toLowerCase())

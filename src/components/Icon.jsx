@@ -3,7 +3,7 @@ import css from '../common.module.css';
 import clsx from 'clsx';
 
 const Icon = ({ name, className = '' }) => {
-  const iconName = ICONS[name];
+  const iconName = ICONS[name.toLowerCase()];
   if (!iconName) {
     console.warn(`Icon "${name}" not found in ICONS constants`);
     return null;

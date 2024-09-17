@@ -7,15 +7,17 @@ export const VEHICLE_EQUIPMENT_FILTERS = [
 ];
 
 export const ICONS = {
-  AC: 'wind',
-  Automatic: 'gears',
-  Kitchen: 'cup-hot',
-  TV: 'tv',
-  Bathroom: 'droplet',
-  Van: 'grid-1x2',
-  'Fully Integrated': 'grid-3x3',
-  Alcove: 'grid-2x2',
-  Petrol: 'fuel-pump',
+  ac: 'wind',
+  automatic: 'gears',
+  kitchen: 'cup-hot',
+  tv: 'tv',
+  bathroom: 'droplet',
+  van: 'grid-1x2',
+  'fully integrated': 'grid-3x3',
+  alcove: 'grid-2x2',
+  petrol: 'fuel-pump',
+  radio: 'ui-radios',
+
 };
 
 export const VEHICLE_TYPE_FILTERS = [

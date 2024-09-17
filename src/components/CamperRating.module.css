@@ -1,0 +1,11 @@
+@import '../common.module.css';
+
+.container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.container svg {
+    fill: var(--yellow);
+}

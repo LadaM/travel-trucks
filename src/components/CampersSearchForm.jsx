@@ -20,7 +20,7 @@ const CampersSearchForm = () => {
   const filters = useSelector(selectFilters);
 
   const handleSubmit = (values) => {
-    console.log(values)
+    // console.log(values)
     dispatch(setFilters(values));
   };
 
@@ -88,7 +88,7 @@ const CampersSearchForm = () => {
             <ErrorMessage name="vehicleTypes" component="div" className={css.error} />
           </div>
 
-          <button type="submit" className={css.primaryButton}>Search</button>
+          <button type="submit" className={clsx(css.button, css.primaryButton)}>Search</button>
         </Form>
       )}
     </Formik>
