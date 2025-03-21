@@ -1,18 +1,35 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const loadFromLocalStorage = () => {
+  try {
+    const stored = localStorage.getItem('favorites');
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
+const saveToLocalStorage = (favorites) => {
+  try {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  } catch {
+    console.error('Failed to save favorites to local storage');
+  }
+};
 
 const favoritesSlice = createSlice({
   name: 'favorites',
-  initialState,
+  initialState: loadFromLocalStorage(),
   reducers: {
     toggleFavorite: (state, action) => {
-      const index = state.indexOf(action.payload);
-      if (index > -1) {
-        state.splice(index, 1);
+      const camperId = action.payload;
+      const index = state.indexOf(camperId);
+      if (index === -1) {
+        state.push(camperId);
       } else {
-        state.push(action.payload);
+        state.splice(index, 1);
       }
+      saveToLocalStorage(state);
     },
   },
 });
