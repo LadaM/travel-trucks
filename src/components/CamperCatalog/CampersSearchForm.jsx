@@ -55,7 +55,7 @@ const CampersSearchForm = () => {
                   className={clsx(css.button, css.filterButton, values.equipment.includes(item) && css.selected)}
                 >
                   <Icon name={item} />
-                  {item}
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
                 </button>
               ))}
             </div>

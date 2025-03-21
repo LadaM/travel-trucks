@@ -1,9 +1,9 @@
 export const VEHICLE_EQUIPMENT_FILTERS = [
   'AC',
-  'Automatic',
-  'Kitchen',
+  'automatic',
+  'kitchen',
   'TV',
-  'Bathroom',
+  'bathroom',
 ];
 
 export const ICONS = {
