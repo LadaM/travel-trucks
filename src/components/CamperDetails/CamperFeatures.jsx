@@ -1,5 +1,6 @@
 import css from './CamperFeatures.module.css';
 import { useLocation } from 'react-router-dom';
+import CamperEquipment from '../CamperEquipment.jsx';
 
 const FeaturesPage = () => {
   const location = useLocation();
@@ -11,6 +12,7 @@ const FeaturesPage = () => {
 
   return (
     <div className={css.container}>
+      <CamperEquipment camper={camper} />
       <div>
         <h3>Vehicle details</h3>
         <hr className={css.ruler} />

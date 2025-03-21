@@ -1,0 +1,29 @@
+@import "../common.module.css";
+
+.equipment-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.equipment-chip {
+    height: 48px;
+    width: fit-content;
+    padding: 12px 18px 12px 18px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--light-grey);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.005em;
+}
+
+.equipment-chip svg {
+    width: 20px;
+    height: 20px;
+}

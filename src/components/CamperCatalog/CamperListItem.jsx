@@ -3,11 +3,10 @@ import css from './CamperListItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite } from '../../store/favoritesSlice.js';
 import { FaRegHeart } from 'react-icons/fa';
-import { ICONS } from '../../constants.js';
-import Icon from '../Icon.jsx';
 import clsx from 'clsx';
 import CamperRating from '../CamperRating.jsx';
 import { camperShape } from '../../camperPropTypes.js';
+import CamperEquipment from '../CamperEquipment.jsx';
 
 const CamperListItem = ({ camper }) => {
   const dispatch = useDispatch();
@@ -38,16 +37,7 @@ const CamperListItem = ({ camper }) => {
           </div>
         </div>
         <p className={css.body1Grey}>{camper.description}</p>
-        <div className={css.equipmentContainer}>
-          {Object.keys(camper).map((key) => (
-            key.toLowerCase() in ICONS && camper[key] && (
-              <div key={key} className={clsx(css.equipmentChip, css.body2)}>
-                <Icon name={key} />
-                {key}
-              </div>
-            )
-          ))}
-        </div>
+        <CamperEquipment camper={camper} />
         <Link to={`/catalog/${camper.id}`}>
           <button className={clsx(css.button, css.primaryButton)}>Show More</button>
         </Link>
