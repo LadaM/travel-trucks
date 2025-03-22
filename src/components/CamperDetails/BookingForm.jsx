@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import css from './BookingForm.module.css';
 import clsx from 'clsx';
+import { toast } from 'react-toastify';
 
 const BookingForm = () => {
   const initialValues = {
@@ -18,16 +19,19 @@ const BookingForm = () => {
     comment: Yup.string(),
   });
 
+
   const handleSubmit = (values, { resetForm }) => {
-    // Send form data
-    console.log('Form data:', values);
-    resetForm();
-  };
+  console.log('Form data:', values);
+
+  toast.success(`Дякуємо, ${values.name}! Вашу бронь успішно відправлено.`);
+
+  resetForm();
+};
 
   return (
     <div className={css.container}>
       <div className={css.header}>
-        <h3>Book your campervan now</h3>
+        <h3>Book your camper van now</h3>
         <p className={css.body1Grey}>Stay connected! We are always ready to help you.</p>
       </div>
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>

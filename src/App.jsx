@@ -8,6 +8,8 @@ import ReviewsPage from './components/CamperDetails/CamperReviews.jsx';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCampers } from './store/campersSlice';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
@@ -29,6 +31,7 @@ const App = () => {
           </Route>
         </Routes>
       </Router>
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };
